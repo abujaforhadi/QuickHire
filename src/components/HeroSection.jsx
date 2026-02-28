@@ -6,11 +6,11 @@ import { Button } from "./ui/button";
 
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-[#F8F8FD]" >
+    <section className="relative overflow-hidden bg-[#F8F8FD] font-epilogue" >
       <div className="w-full  md:max-w-7xl mx-6 md:mx-auto my-20 md:mt-10  grid md:grid-cols-2 items-center gap-12">
 
         <div className="z-10">
-          <h1 className="text-5xl md:text-7xl font-bold text-slate-900 leading-tight mb-6">
+          <h1 className="text-5xl md:text-7xl font-bold text-slate-900 leading-tight mb-6 font-clash-display">
             Discover <br />
             more than <br />
             <span className="text-[#26A4FF] relative inline-block">
@@ -39,7 +39,7 @@ export default function HeroSection() {
             </span>
           </h1>
 
-          <p className="text-gray-500 max-w-md mb-8">
+          <p className="text-gray-500 max-w-md mb-8 font-epilogue">
             Great platform for the job seeker that searching for new career
             heights and passionate about startups.
           </p>
