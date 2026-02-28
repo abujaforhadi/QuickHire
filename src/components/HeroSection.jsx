@@ -13,7 +13,7 @@ export default function HeroSection() {
           <h1 className="text-5xl md:text-7xl font-bold text-slate-900 leading-tight mb-6">
             Discover <br />
             more than <br />
-            <span className="text-blue-500 relative inline-block">
+            <span className="text-[#26A4FF] relative inline-block">
               5000+ Jobs
 
               <svg
