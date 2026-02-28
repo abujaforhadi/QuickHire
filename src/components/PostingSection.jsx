@@ -7,14 +7,13 @@ export default function PostingSection() {
     return (
         <section className="py-20 ">
             <div className="max-w-7xl mx-auto px-6">
-                <div className="relative overflow-hidden rounded-2xl">
+                <div className="relative overflow-hidden w-full ">
 
                     <div
-                        className="absolute inset-0 bg-cover bg-center w-full"
+                        className="absolute inset-0 bg-no-repeat bg-contain"
                         style={{ backgroundImage: "url('/bg2.png')" }}
                     />
 
-                    <div className="absolute right-0 top-0 h-full w-40 bg-[#f7f8fc] clip-angle hidden lg:block" />
 
                     <div className="relative grid lg:grid-cols-2 items-center gap-10 px-10 md:px-16 py-14 text-white">
                         <div>
