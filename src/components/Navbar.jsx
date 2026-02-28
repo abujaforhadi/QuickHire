@@ -10,7 +10,7 @@ export default function Navbar() {
     const [open, setOpen] = useState(false);
 
     return (
-        <nav className="bg-transparent text-primary/80 sticky top-0 z-50">
+        <nav className="bg-transparent text-primary/80 fixed top-0 z-50 w-full">
             <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
                 <div className="flex gap-2 items-center">
                     <Link href="/" className="flex items-center gap-1">
@@ -36,7 +36,7 @@ export default function Navbar() {
                     <Link href="/login">
                         <Button
 
-                            className="text-blue-600 bg-white "
+                            className="text-blue-600 bg-transparent "
                         >
                             Login
                         </Button>
