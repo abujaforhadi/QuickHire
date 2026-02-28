@@ -1,0 +1,52 @@
+import { ArrowRight, Briefcase, Code, LineChart, Megaphone, Monitor, PenTool, Users, Wallet } from 'lucide-react';
+import Link from 'next/link'
+import React from 'react'
+
+function CategorySection() {
+  return (
+     <section className="py-16 md:py-24 max-w-7xl mx-auto px-6">
+    <div className="flex flex-col md:flex-row justify-between items-end mb-10 gap-4">
+      <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
+        Explore by <span className="text-blue-500">category</span>
+      </h2>
+      <Link href="#" className="text-blue-600 font-medium flex items-center gap-2 hover:underline">
+        Show all jobs <ArrowRight size={16} />
+      </Link>
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <CategoryCard icon={PenTool} title="Design" count="235" />
+      <CategoryCard icon={LineChart} title="Sales" count="756" />
+      <CategoryCard icon={Megaphone} title="Marketing" count="140" active />
+      <CategoryCard icon={Wallet} title="Finance" count="325" />
+      <CategoryCard icon={Monitor} title="Technology" count="436" />
+      <CategoryCard icon={Code} title="Engineering" count="542" />
+      <CategoryCard icon={Briefcase} title="Business" count="211" />
+      <CategoryCard icon={Users} title="Human Resource" count="346" />
+    </div>
+  </section>
+  )
+}
+
+export default CategorySection
+
+
+const CategoryCard = ({ icon: Icon, title, count, active }) => (
+  <div className={`p-6  border transition-all cursor-pointer group flex flex-col gap-4
+    ${active 
+      ? 'bg-blue-600 border-blue-600 text-white shadow-lg shadow-blue-600/20' 
+      : 'bg-white border-slate-200 hover:border-blue-300 hover:shadow-md text-slate-800'}`}>
+    <div className="flex justify-between items-start">
+      <div className={`p-3 rounded-lg ${active ? 'bg-white/20' : 'bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors'}`}>
+        <Icon size={24} />
+      </div>
+    </div>
+    <div>
+      <h3 className={`font-semibold text-2xl mb-1 ${active ? 'text-white' : 'text-slate-900'}`}>{title}</h3>
+      <div className="flex justify-between items-center">
+        <p className={`text-sm ${active ? 'text-blue-100' : 'text-slate-500'}`}>{count} jobs available</p>
+        <ArrowRight size={16} className={`${active ? 'text-white' : 'text-slate-400 group-hover:text-blue-600'}`} />
+      </div>
+    </div>
+  </div>
+);
